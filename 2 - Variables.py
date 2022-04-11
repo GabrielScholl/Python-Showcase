@@ -17,3 +17,37 @@ a = 'I\'m not' # Single or double quotes are the same thing, though now we have 
 
 print(a)
 
+# Variables are case sensitive, can't start with a number and must start with a letter or "_"
+# They may only contain numbers, letters and underscores
+
+# Multiple variables
+
+a, b, c, d = "Adam", 'Bobby', 44, False
+
+# Same value
+
+x = y = 78
+
+# Unpacking
+
+lista = ['Gabriel', 22, True]
+name, age, is_tall = lista
+print(name, age, is_tall)
+
+# Globals
+
+inicio = 'this is a global' # Variable available everywhere
+fim = ' variable'
+
+def juntar(): # inicio not passed as argument
+    fim = ' variable' # Local variable
+    print(inicio+fim)
+
+def juntar2():
+    inicio = 'this is a local' # Same name as global, but now it's a local variable and the global is untoutched
+    print(inicio+fim) # Uses the global 'fim'
+
+def juntar3():
+    global inicio # This brings the global inside
+    inicio = 'this global is now an edited' # Now the global variable is edited
+    print(inicio+fim)

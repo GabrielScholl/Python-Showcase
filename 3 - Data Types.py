@@ -3,7 +3,9 @@
 # Text, numbers, sequences, mapping, sets, boolean or binary.
 # Each one has different uses and constructions, as we'll see below.
 
+
 # Numbers ------------------------------------------------------------------------------------------
+
 
 a = 456 # Integer
 b = 45.6 # Float
@@ -28,8 +30,10 @@ from xml.dom.pulldom import SAX2DOM # You can import mid-code in Python, but it'
 rnd_num = random.randrange(-56,45) # Generates a random number within the given range
 print(rnd_num)
 
+
 # Text ----------------------------------------------------------------------------------------------
 # AKA Strings
+
 
 # Multi-line strings
 multiline = '''This is the first line
@@ -131,7 +135,10 @@ print('Gabriel'.swapcase()) # Swaps the cases
 print('59.99'.zfill(5)) # Fills the start with zeroes until parameter length obtained
 print('9.50'.zfill(5))
 
+
 # Booleans ------------------------------------------------------------------------------------------
+
+
 # Any expression will return a True or False.
 print(9 > 5)
 
@@ -151,7 +158,15 @@ print(bool(myobj)) # This returns False
 
 # Pretty much the rest of everything returns true
 
+
 # Sequences -----------------------------------------------------------------------------------------
+
+
 # Mapping -------------------------------------------------------------------------------------------
+
+
 # Sets ----------------------------------------------------------------------------------------------
+
+
 # Binaries ------------------------------------------------------------------------------------------
+

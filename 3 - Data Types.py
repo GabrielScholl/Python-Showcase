@@ -36,7 +36,7 @@ the "enter" line break is considered too.
 So this is the 3rd line.'''
 
 # The array string nature
-word = multiline[12:16] # Grab a slice of the array
+word = multiline[-12:] # Grab a slice of the array
 char = word[2] # Grab a character which is a list item
 
 # Looping through a string
@@ -51,6 +51,28 @@ print('is_is_in_it = '+str(is_is_in_it))
 
 is_not_not_in_it = "not" not in multiline # Value is also True.
 print('is_not_not_in_it = '+str(is_not_not_in_it))
+
+# Length
+print(len(multiline)) # Much easier
+
+# Methods for modifying strings
+print(word.upper()) # FULL STRING IN UPPER CASE
+print(word.lower()) # full string in lower case
+print(word.strip()) # Strip the whitespace off the BEGINNIG OR END of the string
+print(word.replace('e','a')) # Replace first argument in string with second
+print(word.split('.')) # Split the string in the argument to create a list
+
+# Concatenation - just sum them
+phrase = word + char + "notn" + str(8)
+
+# Format method
+# The curly brackets are the place holders, they receive inserts no matter their format
+txt = "All the {} are in the {} {} which took {} minutes to make. That's a {} statement."
+print(txt.format('bananas', 5, 'apple pies', 3.7, True))
+
+# You can change the order by enumerating them
+statement = '{1} is bigger than {0}'
+print(statement.format(3, 4))
 
 # Sequences -----------------------------------------------------------------------------------------
 # Mapping -------------------------------------------------------------------------------------------

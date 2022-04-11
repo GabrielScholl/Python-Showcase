@@ -16,3 +16,4 @@ A = "I'm capitalized" # Both constructions are correct and different variables.
 a = 'I\'m not' # Single or double quotes are the same thing, though now we have to use back slash to mean ' literally
 
 print(a)
+

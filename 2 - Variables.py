@@ -5,13 +5,11 @@ print(type(x)) # x is an int
 x = 'text' # x is now a string
 
 # Casting is changing the value type. Here we'll assign it to a variable
-
 a = str(5) # a is now "5" as in the string with those contents
 b = int(5.1) # b receives 5, an int
 c = float(5) # c's value is 5.0, a float
 
 # Capital letters
-
 A = "I'm capitalized" # Both constructions are correct and different variables.
 a = 'I\'m not' # Single or double quotes are the same thing, though now we have to use back slash to mean ' literally
 
@@ -21,21 +19,17 @@ print(a)
 # They may only contain numbers, letters and underscores
 
 # Multiple variables
-
 a, b, c, d = "Adam", 'Bobby', 44, False
 
 # Same value
-
 x = y = 78
 
 # Unpacking
-
 lista = ['Gabriel', 22, True]
 name, age, is_tall = lista
 print(name, age, is_tall)
 
 # Globals
-
 inicio = 'this is a global' # Variable available everywhere
 fim = ' variable'
 

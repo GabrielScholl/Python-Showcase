@@ -105,6 +105,7 @@ print('Gabriel'.isalpha()) # Checks if all alphabetic
 print('Gabriel'.isdecimal()) # Checks if all decimal
 print('Gabriel'.isdigit()) # Checks if all digits
 print('Gabriel'.isidentifier()) # Checks if the string is an identifier
+print(isinstance('Gabriel', str)) # Checks if the input is of that instance/type
 print('Gabriel'.islower()) # Checks if all lower case
 print('Gabriel'.isnumeric()) # Checks if all numeric
 print('Gabriel'.isprintable()) # Checks if all printable
@@ -131,6 +132,25 @@ print('59.99'.zfill(5)) # Fills the start with zeroes until parameter length obt
 print('9.50'.zfill(5))
 
 # Booleans ------------------------------------------------------------------------------------------
+# Any expression will return a True or False.
+print(9 > 5)
+
+# More often than not, simple values or objects will return True.
+# That will occur when it's not empty, not zero, not None and not False.
+# Boolean False examples:
+if not (bool("") or bool({}) or bool(()) or bool([]) or bool(0) or bool(False) or bool(None)):
+    print('All False')
+
+# Special situation where the class is read as False: if it's __len__ returns 0
+class myclass():
+  def __len__(self):
+    return 0
+
+myobj = myclass()
+print(bool(myobj)) # This returns False
+
+# Pretty much the rest of everything returns true
+
 # Sequences -----------------------------------------------------------------------------------------
 # Mapping -------------------------------------------------------------------------------------------
 # Sets ----------------------------------------------------------------------------------------------

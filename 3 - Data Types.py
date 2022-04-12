@@ -360,7 +360,7 @@ print(carDict.get("condition"))
 print(list(carDict.keys())) # List keys
 
 def addColors(colors):
-    carDict["colors"] += colors # Operating values inside a directory
+    carDict["colors"] += colors # Operating values inside a dictionary
 
 addColors(["white", "red", "blue", "yellow"])
 print(carDict)
@@ -371,8 +371,54 @@ print(carDict.items()) # Keys and values as tuples
 [print('Y') if "model" in carDict else print('N')] # Checking presence only works for keys
 [print('Y') if "Mazda" in carDict else print('N')]
 
-carDict.update({"unit": "miles"}) # Can use the update() method 
+carDict.update({"unit": "miles"}) # Can use the update() method inputting a dict or key-value pair to change the dict
 
+# Removing
+carDict.pop("rotary") # Pops the key-value
+carDict.popitem() # Pops last key-value in *3.7+, random in 3.6-
+del carDict["VIN"]
+
+# Can loop
+for el in carDict: # Loops keys
+    pass
+for el in carDict.values(): # Loops values
+    pass
+for el in carDict.items(): # Loops key-values as tuples
+    print(el)
+
+# Copying
+cars2 = carDict # Both are now linked
+cars2 = carDict.copy() # Different entities
+cars2 = dict(carDict) # Different entities
+
+carDict.clear() # Not needed if del is used
+del carDict
+
+# Dict Nesting
+car3 = {
+    "make": "Supreme",
+    "model": 911
+}
+garage = {
+    "Bimmer": {
+        "make": "BMW",
+        "model": "325i"
+    },
+    "Hummer": {
+        "make": "Hummer",
+        "model": "H1"
+    },
+    "Surprise": car3
+}
+
+from pprint import pprint # For pretty printing dictionaries
+
+pprint(garage)
+
+# Methods for dicts
+pprint(dict.fromkeys(("name", "surname", "age"), ("Colin", None, 5))) # dict.fromkeys() creates a dict using keys, optional: values
+print(garage.setdefault("Bimmer",None)) # If key doesn't exist, create with and return value, else return its value
+print(garage.setdefault("FIAT","Fix It Again, Tony"))
 
 
 # Mapping -------------------------------------------------------------------------------------------

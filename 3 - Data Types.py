@@ -24,6 +24,7 @@ b_integer = int(b) # The int() constructor will remove any decimal information f
 print(a_complex, b_integer)
 
 # Random number 
+from hashlib import new
 import random
 from xml.dom.pulldom import SAX2DOM # You can import mid-code in Python, but it's not pretty
 
@@ -167,9 +168,79 @@ print(bool(myobj)) # This returns False
 # Dict {":"} -   Ordered*,   changeable , no duplicates,   indexed *as of Python 3.7+
 
 
+# Lists - O C AD I
+myList = ['car', 5, True]
+otherList = list(('car', 5, True)) # You can use the list() constructor
+print(len(myList))
 
-# Lists
+# Indexes
+cars = ['Bentley', 'Bugatti', 'Beetle', 'Bora', 'Burgman']
+fastest = cars[1]
+brazilian = cars[2:4] # Same as [2,4[ (first parameter included, second not included)
+print(cars[-4:-1]) # Always runs the list left to right
 
+# Changing lists
+newCars = ['UP', 'Gol', 'Voyage', 'Virtus']
+cars[2:3] = newCars # By inserting more items than the slice specified, substitution followed by insertion will happen
+print(cars)
+newCars.insert(2, 'T-Cross') # Insert into index position, without substitution
+print(newCars)
+cars.append('Variant')
+print(cars)
+cars.extend(['Golf','Jetta']) # Appends any iterable (list, tuple, set, dict) without creating another dimension
+print(cars)
+
+# Removing
+newCars.remove('UP') # Removes by match
+newCars.pop(0) # Removes by index or last one if no index
+del newCars[0] # Same as pop
+print(newCars)
+newCars.clear() # Empties the list
+del newCars
+
+# Looping
+for el in cars:
+    print(el)
+# It can also be done by iterating indexes until len(list), using a while and counter, or using list comprehension
+# Comprehension
+[print(el) for el in cars]
+# List comprehension syntax: newlist = [expression (optional manipulate output: if condition else expression) for el in iterable (optional manipulate input: if condition == True)]
+# Example:
+newCars = ['Taos']
+otherCars = [car if car != 'Voyage' else 'Bon Voyage!' for car in cars if car not in newCars]
+print(otherCars)
+
+# Sorting
+cars.sort() # Case sensitive, so not alphabetic order (all Uppercase before all lowercase)
+print(cars)
+cars.sort(key=str.lower) # Case insensitive
+print(cars)
+cars.sort(reverse=True)
+print(cars)
+def rule(el):
+    return abs(len(el)**2-len(el))
+cars.sort(key=rule, reverse=False) # The key will be the input for sorting
+print(cars)
+cars.reverse() # Reverse the current order
+print(cars)
+
+# Copying
+vehicles_list = cars # vehicles_list will reference cars and changes will carry over
+vehicles_list = cars.copy() # vehicles_list is now a different list with same values
+vehicles_list = list(cars) # same as copy()
+
+# Joining lists
+a = [1, 2, 3]
+b = [4, 5, 6]
+c = a + b # c is not linked to a or b
+print(c)
+a.extend(b) # extend() appends a list at the end
+print(a)
+
+# List methods
+print(cars.count('Jetta')) # Number of times that value appears in the list
+print(cars.index('Golf'))  # Like with strings, returns the index of first occurency
+# The rest has already been used before
 
 
 # Mapping -------------------------------------------------------------------------------------------

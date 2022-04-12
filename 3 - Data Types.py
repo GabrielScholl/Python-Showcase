@@ -243,6 +243,55 @@ print(cars.index('Golf'))  # Like with strings, returns the index of first occur
 # The rest has already been used before
 
 
+
+
+# Tuples - O UC AD I
+# Unchangeable means no adding, removing or editing values
+
+mytuple = ('John', 'Cena', 35, False)
+print(len(mytuple))
+singeItemTuple = ('Uno',) # Use a comma at the end to create a one-item tuple
+otherTuple = tuple(('Uno','Duo')) # The tuple constructor
+print(otherTuple)
+
+# Indexing - same as lists
+
+# Mutability hack - convert to List, edit and back to Tuple
+mylist = list(mytuple)
+mylist[2] = 36
+mytuple = tuple(mylist)
+print(mytuple)
+
+# Adding tuples is allowed
+tuple2 = ('6foot3',)
+mytuple += tuple2
+print(mytuple)
+del tuple2
+
+# Unpacking a tuple
+name, surname, age, reality, height = mytuple
+print(height)
+*fullname, age, reality, height = mytuple # Less output variables than items in tuple, use * and Python will dump stuff in a list there accordingly
+print(fullname)
+
+# Loop you can
+
+# Join
+joined = mytuple + otherTuple
+
+# Repeat
+repeating = otherTuple * 5
+print(repeating)
+
+# Tuple methods
+repeating.count('Uno') # Counts how many occurencies
+repeating.index('Duo') # Returns the position
+
+
+# Sets
+
+
+
 # Mapping -------------------------------------------------------------------------------------------
 
 

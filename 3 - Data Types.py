@@ -160,6 +160,16 @@ print(bool(myobj)) # This returns False
 
 
 # Sequences -----------------------------------------------------------------------------------------
+# AKA Collections or Arrays, they can be:
+# Lists []   -   Ordered ,   changeable ,    duplicates,   indexed
+# Tuple ()   -   Ordered , unchangeable ,    duplicates,   indexed
+# Sets  {}   - Unordered , unchangeable*, no duplicates, unindexed *items can't change, but you can add or remove
+# Dict {":"} -   Ordered*,   changeable , no duplicates,   indexed *as of Python 3.7+
+
+
+
+# Lists
+
 
 
 # Mapping -------------------------------------------------------------------------------------------

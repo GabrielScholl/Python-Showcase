@@ -334,11 +334,44 @@ print(mygarage)
 # Set Methods
 farm_key_bowl = farm # Dependent
 future_farm = farm.copy() # Independent
-A, B = beach_house, farm
+A, B = set(beach_house), farm
 A.isdisjoint(B) # True if no intersection between A and B
 A.issubset(B) # True if A is contained in B
 A.issuperset(B) # True if B is contained in A
 
+
+# Dictionaries - O* C ND I *as of Python 3.7
+carDict = {
+    "make": "Mazda",
+    "model": "Rx-7",
+    "year": "1998",
+    "year": "1997", # Repetitions will overwrite the previous data and won't be counted in len()
+    "VIN": "JP762NA25-13B",
+    "Mileage": 86000,
+    "unit": "km",
+    "condition": "pristine",
+    "rotary": True,
+    "colors": ["black", "orange"]
+}
+
+print(carDict["year"])
+print(len(carDict))
+print(carDict.get("condition"))
+print(list(carDict.keys())) # List keys
+
+def addColors(colors):
+    carDict["colors"] += colors # Operating values inside a directory
+
+addColors(["white", "red", "blue", "yellow"])
+print(carDict)
+print(carDict.values()) # List the values
+carDict["drive side"] = "right hand drive"
+print(carDict.items()) # Keys and values as tuples
+
+[print('Y') if "model" in carDict else print('N')] # Checking presence only works for keys
+[print('Y') if "Mazda" in carDict else print('N')]
+
+carDict.update({"unit": "miles"}) # Can use the update() method 
 
 
 

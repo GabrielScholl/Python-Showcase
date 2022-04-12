@@ -1,4 +1,4 @@
-# This file will cover variables
+# This file will cover variables in Python.
 
 x = 5 # x receives 5
 print(type(x)) # x is an int

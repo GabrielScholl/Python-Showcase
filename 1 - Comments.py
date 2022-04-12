@@ -17,4 +17,4 @@ def more(code):
     # print("I do nothing because I'm commented")
     return
 
-# And that about covers comments in Python
+# And that about covers comments in Python.

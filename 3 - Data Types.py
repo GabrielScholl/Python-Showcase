@@ -24,9 +24,7 @@ b_integer = int(b) # The int() constructor will remove any decimal information f
 print(a_complex, b_integer)
 
 # Random number 
-from hashlib import new
-import random
-from xml.dom.pulldom import SAX2DOM # You can import mid-code in Python, but it's not pretty
+import random # You can import mid-code in Python, but it's not pretty
 
 rnd_num = random.randrange(-56,45) # Generates a random number within the given range
 print(rnd_num)
@@ -288,7 +286,59 @@ repeating.count('Uno') # Counts how many occurencies
 repeating.index('Duo') # Returns the position
 
 
-# Sets
+# Sets - UO UC* ND UI *no edit, just add and remove
+mygarage = {458, 'Lambo', 'Prius', 'Cadillac', 'Bentley', 'Rolls'}
+ihave = len(mygarage)
+print("I own "+str(ihave)+" cars.")
+keyBowl = set(mygarage) # The set constructor
+
+def go_for_a_ride():
+    return
+if 'Lambo' in keyBowl:
+    go_for_a_ride()
+print(keyBowl)
+
+def bought_new_car(carName):
+    mygarage.add(carName)
+    keyBowl.add(carName)
+
+beach_house = list(('Buggy', 'Land Rover', 'Africa Twin'))
+keyBowl.update(beach_house) # Same as union below
+keyBowl.union(set(beach_house+['Jetta', 'Buggy'])) # Same as update, both delete duplicates
+print(keyBowl)
+def got_a_lawsuit():
+    mygarage.remove(458) # Will raise error if the item isn't in the list
+    mygarage.discard('Plane') # WON'T raise error
+
+def lost_key():
+    keyBowl.pop() # Removes last item, which is RANDOM
+lost_key()
+print(keyBowl)
+
+def feds_coming():
+    beach_house.clear()
+    del beach_house
+
+# Can loop sets
+
+# Venn Diagrams, Intesections and Bentleys
+farm = {'Bentley', 'Land Rover', 'Plane'}
+common_cars = mygarage.intersection(farm) # Could end in _update()
+print(common_cars)
+mygarage.symmetric_difference_update(farm) # All but intersection
+print(mygarage)
+mygarage.difference_update(farm) # A.dif(B) -> A - B (shows just B exclusives)
+print(mygarage)
+
+
+# Set Methods
+farm_key_bowl = farm # Dependent
+future_farm = farm.copy() # Independent
+A, B = beach_house, farm
+A.isdisjoint(B) # True if no intersection between A and B
+A.issubset(B) # True if A is contained in B
+A.issuperset(B) # True if B is contained in A
+
 
 
 

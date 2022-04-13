@@ -51,9 +51,9 @@ fruits = ["caju", "do conde", "cajá", "romã"]
 for f in fruits:
     for c in f:
         print(c)
-    if f is "caju":
+    if f is "caju": # The "is" checks if both point to the same spot on the memory
         continue
-    if f is "romã":
+    if f == "romã": # The "==" checks if they're equivalent
         break
     for i in range(len(fruits)): print(str(i)+" done")
 
@@ -75,9 +75,16 @@ print("The looping variable is created inside that context (only for that loop).
  
 try: # Tries something that may generate an exception
     print(x) # This triggers the exception as "x" is not defined previously
-except: # Handles it in case of an exception
+except NameError: # Handles it in case of an exception
     print("The variable is not defined") # With this action
+except:
+    print("Something else is the problem")
 else: # Happens if there was no exception
     print(x**2)
 finally: # Always happens, regardless of the occurrence of an exception
     print("This was a bumpy road!")
+
+# Throwing an error (raising an exception)
+if False:
+    raise Exception("I blow up now")
+    raise TypeError("Obj of wrong type")

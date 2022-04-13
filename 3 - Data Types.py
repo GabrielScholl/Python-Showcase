@@ -286,6 +286,11 @@ repeating.count('Uno') # Counts how many occurencies
 repeating.index('Duo') # Returns the position
 
 
+
+
+# Sets ----------------------------------------------------------------------------------------------
+
+
 # Sets - UO UC* ND UI *no edit, just add and remove
 mygarage = {458, 'Lambo', 'Prius', 'Cadillac', 'Bentley', 'Rolls'}
 ihave = len(mygarage)
@@ -338,6 +343,11 @@ A, B = set(beach_house), farm
 A.isdisjoint(B) # True if no intersection between A and B
 A.issubset(B) # True if A is contained in B
 A.issuperset(B) # True if B is contained in A
+
+
+
+
+# Mapping -------------------------------------------------------------------------------------------
 
 
 # Dictionaries - O* C ND I *as of Python 3.7
@@ -419,13 +429,4 @@ pprint(garage)
 pprint(dict.fromkeys(("name", "surname", "age"), ("Colin", None, 5))) # dict.fromkeys() creates a dict using keys, optional: values
 print(garage.setdefault("Bimmer",None)) # If key doesn't exist, create with and return value, else return its value
 print(garage.setdefault("FIAT","Fix It Again, Tony"))
-
-
-# Mapping -------------------------------------------------------------------------------------------
-
-
-# Sets ----------------------------------------------------------------------------------------------
-
-
-# Binaries ------------------------------------------------------------------------------------------
 

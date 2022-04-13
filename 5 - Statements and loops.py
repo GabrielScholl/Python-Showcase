@@ -47,3 +47,26 @@ else: # Else used for when the WHILE is no longer true
         print()
 
 # For
+fruits = ["caju", "do conde", "cajá", "romã"]
+for f in fruits:
+    for c in f:
+        print(c)
+    if f is "caju":
+        continue
+    if f is "romã":
+        break
+    for i in range(len(fruits)): print(str(i)+" done")
+
+for i in range(5, 55, 10):
+    print(i)
+else:
+    print("I am printed once the loop is finished, but only if not by means of a BREAK")
+
+# Nesting
+for i in range(5):
+    print("Ext loop: "+str(i))
+    for i in range(5):
+        print("Int loop: "+str(i))
+        for i in range(5):
+            pass
+print("The looping variable is created inside that context (only for that loop).")

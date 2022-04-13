@@ -70,3 +70,14 @@ for i in range(5):
         for i in range(5):
             pass
 print("The looping variable is created inside that context (only for that loop).")
+
+# Try...exept structure
+ 
+try: # Tries something that may generate an exception
+    print(x) # This triggers the exception as "x" is not defined previously
+except: # Handles it in case of an exception
+    print("The variable is not defined") # With this action
+else: # Happens if there was no exception
+    print(x**2)
+finally: # Always happens, regardless of the occurrence of an exception
+    print("This was a bumpy road!")

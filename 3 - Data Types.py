@@ -92,7 +92,7 @@ print('GABrIEL'.casefold()) # Same as lower()
 print('GABrIEL'.lower()) # Lower cases whole string
 print('gaBRiel'.upper()) # Upper cases whole string
 print('Gabriel'.center(20)) # Prints on total 20 chars, with string in the middle
-print('Gabriel'.count('a')) # Occurencies in the string
+print('Gabriel'.count('a')) # Occurrences in the string
 print('Gåbrõül'.encode(encoding='ascii',errors='xmlcharrefreplace')) # Encodes replacing the unknown char
 print('Gåbrõül'.encode(encoding='ascii',errors='namereplace')) # Encodes describing the strange char, more errors options
 print('Gabriel'.endswith('el')) # True or false
@@ -128,7 +128,7 @@ print('Gabriel is tall and handsome'.partition("is")) # Divides in 3: pre match,
 print('Gabriel is tall and is handsome'.rpartition("is")) # Divides in 3: pre last match, last match, and post
 print('Gabriel'.replace("a","4").replace("i","1").replace("e","3").replace("G","6").replace("b","9").replace("r","8").replace("l","7"))
 print('Gabriel'.split("r")) # Split in char
-print('Gabriellerson'.rsplit("r", 1)) # Split in last n char occurrencies
+print('Gabriellerson'.rsplit("r", 1)) # Split in last n char occurrences
 print('Gabriel\nBruno'.splitlines()) # Split lines
 print('Gabriel'.swapcase()) # Swaps the cases
 print('59.99'.zfill(5)) # Fills the start with zeroes until parameter length obtained
@@ -237,7 +237,7 @@ print(a)
 
 # List methods
 print(cars.count('Jetta')) # Number of times that value appears in the list
-print(cars.index('Golf'))  # Like with strings, returns the index of first occurency
+print(cars.index('Golf'))  # Like with strings, returns the index of first occurrence
 # The rest has already been used before
 
 
@@ -282,7 +282,7 @@ repeating = otherTuple * 5
 print(repeating)
 
 # Tuple methods
-repeating.count('Uno') # Counts how many occurencies
+repeating.count('Uno') # Counts how many occurrences
 repeating.index('Duo') # Returns the position
 
 

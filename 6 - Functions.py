@@ -81,3 +81,29 @@ def makerFunc(val): # Builds the lambda function
 doubler = makerFunc(val=2) # Assign function to "doubler"
 
 print(doubler(6)) # Uses the assigned function with input value as lambda argument
+
+
+# Iterators pt.1 *pt.2 in Classes.py
+
+foodList = ["croissant", "baguette", "caffee"]
+
+foodIterator = iter(foodList)
+print(next(foodIterator))
+print(next(foodIterator))
+
+# Scope
+
+var = 500
+def f1():
+    print(var)
+    def f2():
+        var = 400 # This will be a different var, available only inside the func
+        print(var)
+        def f3():
+            global var # You can create or modify the global like this
+            var = 350
+            print(var)
+        f3()
+    f2()
+f1()
+print(var) # var was changed inside f3()

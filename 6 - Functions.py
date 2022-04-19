@@ -107,3 +107,8 @@ def f1():
     f2()
 f1()
 print(var) # var was changed inside f3()
+
+def Func(): # Function names can start with a capital letter
+    print('funfa')
+
+Func()

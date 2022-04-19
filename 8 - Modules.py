@@ -46,3 +46,16 @@ egg_ben_e_dict = json.dumps(egg_dict, indent=4, separators=(". "," = "), sort_ke
 print(egg_ben_e_dict)
 
 # RegEx MODULE
+import re
+
+lorem = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ante."
+
+# RegEx functions
+first = re.findall('it', lorem) # Returns a list of all matches
+second = re.search('[a-g]', lorem) # Returns a Match Object if at least one match
+third = re.split("it", lorem) # Splits in the matches, returns list
+fourth = re.sub("a.*", "NEY", lorem) # Substitutes matches
+
+print(first, second, third, fourth)
+
+# The website https://regexr.com/ is a great tool for working with RegEx

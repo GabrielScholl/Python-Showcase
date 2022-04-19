@@ -58,4 +58,5 @@ fourth = re.sub("a.*", "NEY", lorem) # Substitutes matches
 
 print(first, second, third, fourth)
 
-# The website https://regexr.com/ is a great tool for working with RegEx
+# The website https://regexr.com/ is a great tool for learning and working with RegEx.
+# Although it only works with JavaScript and PHP regex flavors, they have a lot in common with Python's flavor of RegEx.
